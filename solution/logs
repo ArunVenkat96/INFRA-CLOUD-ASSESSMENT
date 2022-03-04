@@ -1,0 +1,5 @@
+as part 3 logs
+
+docker rm -f infra-test-arun  // deleting the running container
+docker netork create testing
+

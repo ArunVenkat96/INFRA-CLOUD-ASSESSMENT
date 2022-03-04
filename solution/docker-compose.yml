@@ -10,3 +10,13 @@ services:
       - "9393:9300"
     volumes:
       - ./inputFile:/csvserver/inputdata
+    network_mode: "testing"
+
+  prometheus:
+    container_name: monitor
+    image: prom/prometheus:v2.22.0
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    network_mode: "testing"
