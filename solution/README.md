@@ -26,9 +26,16 @@ COMMANDS EXECUTED - PART1
     a) insidecontainer --> netstat -ano
 8. docker run -idt --name infratest -v `pwd`/inputFile:/csvserver/inputdata -p 9393:9300 -e CSVSERVER_BORDER=Orange infracloudio/csvserver
 
+COMMAND EXECUTED - PART2
+1. docker rm -f infratest
+2. docker-compose up -d
+
 
 COMMAND EXECUTED - PART3
-1. docker network create testing
+1. docker-compose down //in solution directory
+2. docker network create testing
+3. docker-compose up -d
+
 
 
 prometheus_monitoring: http://localhost:9090
